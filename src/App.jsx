@@ -85,18 +85,21 @@ function App() {
     {
       id: crypto.randomUUID(),
       title: "Project Title",
+      monthYear: "Month Year",
       technologies: "Technologies used e.g. JavaScript, HTML, CSS",
       pointers: ["Short description or acheivement 1", "Short description or acheivement 2", "Short description or acheivement 3"]
     },
     {
       id: crypto.randomUUID(),
       title: "Project Title",
+      monthYear: "Month Year",
       technologies: "Technologies used e.g. JavaScript, HTML, CSS",
       pointers: ["Short description or acheivement 1", "Short description or acheivement 2", "Short description or acheivement 3"]
     },
     {
       id: crypto.randomUUID(),
       title: "Project Title",
+      monthYear: "Month Year",
       technologies: "Technologies used e.g. JavaScript, HTML, CSS",
       pointers: ["Short description or acheivement 1", "Short description or acheivement 2", "Short description or acheivement 3"]
     },
