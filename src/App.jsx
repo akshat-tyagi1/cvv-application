@@ -1,7 +1,7 @@
 import { useState } from "react";
 import GeneralInfo from "./components/genereralInfo";
 import Education from "./components/education";
-import { Languages } from "lucide-react";
+import Skills from "./components/skills";
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState({
@@ -33,32 +33,32 @@ function App() {
     {
       id: crypto.randomUUID(),
       category: "Languages",
-      skills: "e.g. JavaScript, Python, C, C++"
+      technologies: "e.g. JavaScript, Python, C, C++"
     },
     {
       id: crypto.randomUUID(),
       category: "Frontend",
-      skills: "e.g. React, HTML, CSS, Tailwind CSS, Next.js"
+      technologies: "e.g. React, HTML, CSS, Tailwind CSS, Next.js"
     },
     {
       id: crypto.randomUUID(),
       category: "Backend",
-      skills: "e.g. Node.js, Express, REST APIs"
+      technologies: "e.g. Node.js, Express, REST APIs"
     },
     {
       id: crypto.randomUUID(),
       category: "Databases",
-      skills: "e.g. PostgreSQL, MongoDB, Prisma"
+      technologies: "e.g. PostgreSQL, MongoDB, Prisma"
     },
     {
       id: crypto.randomUUID(),
       category: "Tools",
-      skills: "e.g. Git, Github, VS Code, Figma, Docker"
+      technologies: "e.g. Git, Github, VS Code, Figma, Docker"
     },
     {
       id: crypto.randomUUID(),
       category: "Other",
-      skills: "e.g. Data Structures & Algorithms, Problem Solving, Linux"
+      technologies: "e.g. Data Structures & Algorithms, Problem Solving, Linux"
     },
   ]);
 
@@ -66,7 +66,7 @@ function App() {
     <div>
       <GeneralInfo generalInfo={generalInfo} />
       <Education education={education} />
-      
+      <Skills skills={skills} />
     </div>
   );
 }
