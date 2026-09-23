@@ -72,7 +72,33 @@ function App() {
       companyName: "Company Name",
       city: "City",
       country: "Country",
-      pointers: ["Achievement or responsibility 1", "Achievement or responsibility 2", "Achievement or responsibility 3", "Achievement or responsibility 4"],
+      pointers: [
+        "Achievement or responsibility 1",
+        "Achievement or responsibility 2",
+        "Achievement or responsibility 3",
+        "Achievement or responsibility 4",
+      ],
+    },
+  ]);
+
+  const [projects, setProjects] = useState([
+    {
+      id: crypto.randomUUID(),
+      title: "Project Title",
+      technologies: "Technologies used e.g. JavaScript, HTML, CSS",
+      pointers: ["Short description or acheivement 1", "Short description or acheivement 2", "Short description or acheivement 3"]
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "Project Title",
+      technologies: "Technologies used e.g. JavaScript, HTML, CSS",
+      pointers: ["Short description or acheivement 1", "Short description or acheivement 2", "Short description or acheivement 3"]
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "Project Title",
+      technologies: "Technologies used e.g. JavaScript, HTML, CSS",
+      pointers: ["Short description or acheivement 1", "Short description or acheivement 2", "Short description or acheivement 3"]
     },
   ]);
 
