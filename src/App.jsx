@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { use, useState } from "react";
 import GeneralInfo from "./components/genereralInfo";
 import Education from "./components/education";
 import Skills from "./components/skills";
@@ -33,32 +33,44 @@ function App() {
     {
       id: crypto.randomUUID(),
       category: "Languages",
-      technologies: "e.g. JavaScript, Python, C, C++"
+      technologies: "e.g. JavaScript, Python, C, C++",
     },
     {
       id: crypto.randomUUID(),
       category: "Frontend",
-      technologies: "e.g. React, HTML, CSS, Tailwind CSS, Next.js"
+      technologies: "e.g. React, HTML, CSS, Tailwind CSS, Next.js",
     },
     {
       id: crypto.randomUUID(),
       category: "Backend",
-      technologies: "e.g. Node.js, Express, REST APIs"
+      technologies: "e.g. Node.js, Express, REST APIs",
     },
     {
       id: crypto.randomUUID(),
       category: "Databases",
-      technologies: "e.g. PostgreSQL, MongoDB, Prisma"
+      technologies: "e.g. PostgreSQL, MongoDB, Prisma",
     },
     {
       id: crypto.randomUUID(),
       category: "Tools",
-      technologies: "e.g. Git, Github, VS Code, Figma, Docker"
+      technologies: "e.g. Git, Github, VS Code, Figma, Docker",
     },
     {
       id: crypto.randomUUID(),
       category: "Other",
-      technologies: "e.g. Data Structures & Algorithms, Problem Solving, Linux"
+      technologies: "e.g. Data Structures & Algorithms, Problem Solving, Linux",
+    },
+  ]);
+
+  const [experience, setExperience] = useState([
+    {
+      title: "Job Title",
+      startMonthYear: "Start Month Year",
+      endMonthYear: "End Month Year",
+      pointerOne: "Achievement or responsibility 1",
+      pointerTwo: "Achievement or responsibility 1",
+      pointerThree: "Achievement or responsibility 1",
+      pointerFour: "Achievement or responsibility 1"
     },
   ]);
 
