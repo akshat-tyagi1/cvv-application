@@ -1,7 +1,8 @@
-import { use, useState } from "react";
+import { useState } from "react";
 import GeneralInfo from "./components/genereralInfo";
 import Education from "./components/education";
 import Skills from "./components/skills";
+import Expereince from "./components/expereince";
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState({
@@ -62,15 +63,16 @@ function App() {
     },
   ]);
 
-  const [experience, setExperience] = useState([
+  const [experiences, setExperiences] = useState([
     {
+      id: crypto.randomUUID(),
       title: "Job Title",
       startMonthYear: "Start Month Year",
       endMonthYear: "End Month Year",
-      pointerOne: "Achievement or responsibility 1",
-      pointerTwo: "Achievement or responsibility 1",
-      pointerThree: "Achievement or responsibility 1",
-      pointerFour: "Achievement or responsibility 1"
+      companyName: "Company Name",
+      city: "City",
+      country: "Country",
+      pointers: ["Achievement or responsibility 1", "Achievement or responsibility 2", "Achievement or responsibility 3", "Achievement or responsibility 4"],
     },
   ]);
 
@@ -79,6 +81,7 @@ function App() {
       <GeneralInfo generalInfo={generalInfo} />
       <Education education={education} />
       <Skills skills={skills} />
+      <Expereince expereinces={experiences} />
     </div>
   );
 }
