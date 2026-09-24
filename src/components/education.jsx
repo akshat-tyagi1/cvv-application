@@ -1,30 +1,30 @@
 function Education({ education }) {
   return (
-    <div className="education-container">
+    <section className="resume-section">
       <h2>EDUCATION</h2>
 
       <div>
         {education.map(
           ({ id, name, city, state, country, degree, startYear, endYear }) => (
-            <div className="education-container" key={id}>
-              <div className="education-header">
+            <article className="entry" key={id}>
+              <div className="entry-header">
                 <h3>[{name}]</h3>
                 <span>
                   [{city}, {state}, {country}]
                 </span>
               </div>
 
-              <div className="education-details">
+              <div className="entry-details">
                 <p>[{degree}]</p>
                 <span>
                   [{startYear}] - [{endYear}]
                 </span>
               </div>
-            </div>
+            </article>
           ),
         )}
       </div>
-    </div>
+    </section>
   );
 }
 

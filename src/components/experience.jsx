@@ -1,6 +1,6 @@
-function Expereince({ expereinces }) {
+function Experience({ expereinces }) {
   return (
-    <section>
+    <section className="resume-section">
       <h2>Experience</h2>
 
       {expereinces.map(
@@ -14,24 +14,24 @@ function Expereince({ expereinces }) {
           country,
           pointers,
         }) => (
-          <article key={id}>
-            <div className="experience-top">
+          <article key={id} className="entry">
+            <div className="experience-header">
               <h3>[{title}]</h3>
               <span>
                 [{startMonthYear} – {endMonthYear}]
               </span>
             </div>
 
-            <div className="experience-bottom">
+            <div className="experience-details">
               <p>[{companyName}]</p>
               <span>
                 [{city}, {country}]
               </span>
             </div>
 
-            <ul>
-              {pointers.map((pointer, index) => (
-                <li key={index}>[{pointer}]</li>
+            <ul className="entry-points">
+              {pointers.map(({id, text}) => (
+                <li key={id}>[{text}]</li>
               ))}
             </ul>
           </article>
@@ -41,4 +41,4 @@ function Expereince({ expereinces }) {
   );
 }
 
-export default Expereince;
+export default Experience;

@@ -1,13 +1,13 @@
 function Skills({skills}) {
     return (
-        <div>
+        <section className="resume-section">
             {skills.map(({id, category, technologies}) => (
-                <dl key={id}>
+                <dl key={id} className="skill-row">
                     <dt>{category}</dt>
                     <dd>[{technologies}]</dd>
                 </dl>
             ))}
-        </div>
+        </section>
     )
 }
 

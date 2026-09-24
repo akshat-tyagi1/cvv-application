@@ -2,7 +2,9 @@ import { useState } from "react";
 import GeneralInfo from "./components/genereralInfo";
 import Education from "./components/education";
 import Skills from "./components/skills";
-import Expereince from "./components/expereince";
+import Experience from "./components/experience";
+import Projects from "./components/projects";
+import Achievements from "./components/achievement";
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState({
@@ -73,10 +75,18 @@ function App() {
       city: "City",
       country: "Country",
       pointers: [
-        "Achievement or responsibility 1",
-        "Achievement or responsibility 2",
-        "Achievement or responsibility 3",
-        "Achievement or responsibility 4",
+        {
+          id: crypto.randomUUID(),
+          text: "Achievement or responsibility 1",
+        },
+        {
+          id: crypto.randomUUID(),
+          text: "Achievement or responsibility 2",
+        },
+        {
+          id: crypto.randomUUID(),
+          text: "Achievement or responsibility 3",
+        },
       ],
     },
   ]);
@@ -87,21 +97,75 @@ function App() {
       title: "Project Title",
       monthYear: "Month Year",
       technologies: "Technologies used e.g. JavaScript, HTML, CSS",
-      pointers: ["Short description or acheivement 1", "Short description or acheivement 2", "Short description or acheivement 3"]
+      pointers: [
+        {
+          id: crypto.randomUUID(),
+          text: "Short description or acheivement 1",
+        },
+        {
+          id: crypto.randomUUID(),
+          text: "Short description or acheivement 2",
+        },
+        {
+          id: crypto.randomUUID(),
+          text: "Short description or acheivement 3",
+        },
+      ],
     },
     {
       id: crypto.randomUUID(),
       title: "Project Title",
       monthYear: "Month Year",
       technologies: "Technologies used e.g. JavaScript, HTML, CSS",
-      pointers: ["Short description or acheivement 1", "Short description or acheivement 2", "Short description or acheivement 3"]
+      pointers: [
+        {
+          id: crypto.randomUUID(),
+          text: "Short description or acheivement 1",
+        },
+        {
+          id: crypto.randomUUID(),
+          text: "Short description or acheivement 2",
+        },
+        {
+          id: crypto.randomUUID(),
+          text: "Short description or acheivement 3",
+        },
+      ],
     },
     {
       id: crypto.randomUUID(),
       title: "Project Title",
       monthYear: "Month Year",
       technologies: "Technologies used e.g. JavaScript, HTML, CSS",
-      pointers: ["Short description or acheivement 1", "Short description or acheivement 2", "Short description or acheivement 3"]
+      pointers: [
+        {
+          id: crypto.randomUUID(),
+          text: "Short description or acheivement 1",
+        },
+        {
+          id: crypto.randomUUID(),
+          text: "Short description or acheivement 2",
+        },
+        {
+          id: crypto.randomUUID(),
+          text: "Short description or acheivement 3",
+        },
+      ],
+    },
+  ]);
+
+  const [achievements, setAchievements] = useState([
+    {
+      id: crypto.randomUUID(),
+      text: "Achievement 1",
+    },
+    {
+      id: crypto.randomUUID(),
+      text: "Achievement 2",
+    },
+    {
+      id: crypto.randomUUID(),
+      text: "Achievement 3",
     },
   ]);
 
@@ -110,7 +174,9 @@ function App() {
       <GeneralInfo generalInfo={generalInfo} />
       <Education education={education} />
       <Skills skills={skills} />
-      <Expereince expereinces={experiences} />
+      <Experience expereinces={experiences} />
+      <Projects projects={projects} />
+      <Achievements achievements={achievements} />
     </div>
   );
 }

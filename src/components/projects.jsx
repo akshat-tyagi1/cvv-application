@@ -1,18 +1,18 @@
 function Projects({ projects }) {
   return (
-    <section>
+    <section className="resume-section">
       <h3>PROJECTS</h3>
       {projects.map(({ id, title, monthYear, technologies, pointers }) => (
-        <article>
-          <article>
+        <article key={id} className="entry">
+          <div className="entry-header">
             <h3>[{title}]</h3>
             <span>[{monthYear}]</span>
-          </article>
+          </div>
 
           <p>[{technologies}]</p>
-          <ul>
-            {pointers.map((pointer, index) => (
-              <li key={index}>[{pointer}]</li>
+          <ul className="entry-points">
+            {pointers.map(({id, text}) => (
+              <li key={id}>[{text}]</li>
             ))}
           </ul>
         </article>
@@ -20,3 +20,5 @@ function Projects({ projects }) {
     </section>
   );
 }
+
+export default Projects;
