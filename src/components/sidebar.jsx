@@ -23,39 +23,57 @@ function Sidebar({
   setAchievements,
 }) {
   return (
-    <div>
+    <div className="sidebar">
       <h2>Edit Your Resume</h2>
 
-      <form action="">
-        <h2>General Info</h2>
-        <GeneralInfoForm
-          generalInfo={generalInfo}
-          setGeneralInfo={setGeneralInfo}
-        />
+      <form
+        action=""
+        className="sidebar-form"
+        onSubmit={(e) => e.preventDefault()}
+      >
+        <div className="sidebar-section">
+          <h2 className="sidebar-section-title">General Info</h2>
+          <GeneralInfoForm
+            generalInfo={generalInfo}
+            setGeneralInfo={setGeneralInfo}
+          />
+        </div>
 
-        <h2>Summary</h2>
-        <SummaryForm summary={summary} setSummary={setSummary} />
+        <div className="sidebar-section">
+          <h2 className="sidebar-section-title">Summary</h2>
+          <SummaryForm summary={summary} setSummary={setSummary} />
+        </div>
 
-        <h2>Education</h2>
-        <EducationForm education={education} setEducation={setEducation} />
+        <div className="sidebar-section">
+          <h2 className="sidebar-section-title">Education</h2>
+          <EducationForm education={education} setEducation={setEducation} />
+        </div>
 
-        <h2>Skills</h2>
-        <SkillsForm skills={skills} setSkills={setSkills} />
+        <div className="sidebar-section">
+          <h2 className="sidebar-section-title">Skills</h2>
+          <SkillsForm skills={skills} setSkills={setSkills} />
+        </div>
 
-        <h2>Experiences</h2>
-        <ExperienceForm
-          experiences={experiences}
-          setExperiences={setExperiences}
-        />
+        <div className="sidebar-section">
+          <h2 className="sidebar-section-title">Experiences</h2>
+          <ExperienceForm
+            experiences={experiences}
+            setExperiences={setExperiences}
+          />
+        </div>
 
-        <h2>Projects</h2>
-        <ProjectsForm projects={projects} setProjects={setProjects} />
+        <div className="sidebar-section">
+          <h2 className="sidebar-section-title">Projects</h2>
+          <ProjectsForm projects={projects} setProjects={setProjects} />
+        </div>
 
-        <h2>Achievements</h2>
-        <AchievementsForm
-          achievements={achievements}
-          setAchievements={setAchievements}
-        />
+        <div className="sidebar-section">
+          <h2 className="sidebar-section-title">Achievements</h2>
+          <AchievementsForm
+            achievements={achievements}
+            setAchievements={setAchievements}
+          />
+        </div>
       </form>
     </div>
   );
