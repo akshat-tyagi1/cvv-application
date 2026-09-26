@@ -6,6 +6,7 @@ import Experience from "./components/experience";
 import Projects from "./components/projects";
 import Achievements from "./components/achievement";
 import Sidebar from "./components/sidebar";
+import Summary from "./components/summary";
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState({
@@ -15,9 +16,9 @@ function App() {
     location: "Your City, State",
     linkdin: "linkdin.com/in/yourusername",
     github: "github.com/yourusername",
-    summary:
-      "Write a short 1-2 line summary about yourself, your interests, and what you're looking for.",
   });
+
+  const [summary, setSummary] = useState("Write a short 1-2 line summary about yourself, your interests, and what you're looking for.")
 
   const [education, setEducation] = useState([
     {
@@ -171,8 +172,9 @@ function App() {
 
   return (
     <div>
-      <Sidebar generalInfo={generalInfo} setGeneralInfo={setGeneralInfo} />
+      <Sidebar generalInfo={generalInfo} setGeneralInfo={setGeneralInfo} summary={summary} setSummary={setSummary}/>
       <GeneralInfo generalInfo={generalInfo} />
+      <Summary summary={summary} />
       <Education education={education} />
       <Skills skills={skills} />
       <Experience expereinces={experiences} />
