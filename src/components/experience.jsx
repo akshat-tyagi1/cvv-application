@@ -1,9 +1,9 @@
-function Experience({ expereinces }) {
+function Experience({ experiences }) {
   return (
     <section className="resume-section">
       <h2>Experience</h2>
 
-      {expereinces.map(
+      {experiences.map(
         ({
           id,
           title,

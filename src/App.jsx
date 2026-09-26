@@ -18,7 +18,9 @@ function App() {
     github: "github.com/yourusername",
   });
 
-  const [summary, setSummary] = useState("Write a short 1-2 line summary about yourself, your interests, and what you're looking for.")
+  const [summary, setSummary] = useState(
+    "Write a short 1-2 line summary about yourself, your interests, and what you're looking for.",
+  );
 
   const [education, setEducation] = useState([
     {
@@ -169,12 +171,23 @@ function App() {
 
   return (
     <div>
-      <Sidebar generalInfo={generalInfo} setGeneralInfo={setGeneralInfo} summary={summary} setSummary={setSummary} education={education} setEducation={setEducation} skills={skills} setSkills={setSkills}/>
+      <Sidebar
+        generalInfo={generalInfo}
+        setGeneralInfo={setGeneralInfo}
+        summary={summary}
+        setSummary={setSummary}
+        education={education}
+        setEducation={setEducation}
+        skills={skills}
+        setSkills={setSkills}
+        experiences={experiences}
+        setExperiences={setExperiences}
+      />
       <GeneralInfo generalInfo={generalInfo} />
       <Summary summary={summary} />
       <Education education={education} />
       <Skills skills={skills} />
-      <Experience expereinces={experiences} />
+      <Experience experiences={experiences} />
       <Projects projects={projects} />
       <Achievements achievements={achievements} />
     </div>
