@@ -184,6 +184,8 @@ function App() {
         setExperiences={setExperiences}
         projects={projects}
         setProjects={setProjects}
+        achievements={achievements}
+        setAchievements={setAchievements}
       />
       <GeneralInfo generalInfo={generalInfo} />
       <Summary summary={summary} />
