@@ -3,6 +3,7 @@ import SummaryForm from "./summaryForm";
 import EducationForm from "./educationForm";
 import SkillsForm from "./skillsForm";
 import ExperienceForm from "./experienceForm";
+import ProjectsForm from "./projectsForm";
 
 function Sidebar({
   generalInfo,
@@ -14,7 +15,9 @@ function Sidebar({
   skills,
   setSkills,
   experiences,
-  setExperiences
+  setExperiences,
+  projects,
+  setProjects
 }) {
     console.log(experiences);
   return (
@@ -39,6 +42,9 @@ function Sidebar({
 
         <h2>Experiences</h2>
         <ExperienceForm experiences={experiences} setExperiences={setExperiences} />
+
+        <h2>Projects</h2>
+        <ProjectsForm projects={projects} setProjects={setProjects} />
       </form>
     </div>
   );

@@ -83,10 +83,12 @@ function ExperienceForm({ experiences, setExperiences }) {
               type="text"
               value={title}
               onChange={(e) =>
-                experiences.map((experience) =>
-                  experience.id === id
-                    ? { ...experience, country: e.target.value }
-                    : experience,
+                setExperiences(
+                  experiences.map((experience) =>
+                    experience.id === id
+                      ? { ...experience, country: e.target.value }
+                      : experience,
+                  ),
                 )
               }
             />
