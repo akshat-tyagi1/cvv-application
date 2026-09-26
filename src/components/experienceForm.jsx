@@ -3,7 +3,7 @@ function ExperienceForm({ experiences, setExperiences }) {
     <div>
       {experiences.map(
         ({
-          id,
+          id: experienceId,
           title,
           startMonthYear,
           endMonthYear,
@@ -12,16 +12,18 @@ function ExperienceForm({ experiences, setExperiences }) {
           country,
           pointers,
         }) => (
-          <div key={id}>
+          <div key={experienceId}>
             <label htmlFor="">Job Title</label>
             <input
               type="text"
               value={title}
               onChange={(e) =>
-                experiences.map((experience) =>
-                  experience.id === id
-                    ? { ...experience, title: e.target.value }
-                    : experience,
+                setExperiences(
+                  experiences.map((experience) =>
+                    experience.id === experienceId
+                      ? { ...experience, title: e.target.value }
+                      : experience,
+                  ),
                 )
               }
             />
@@ -31,10 +33,12 @@ function ExperienceForm({ experiences, setExperiences }) {
               type="text"
               value={startMonthYear}
               onChange={(e) =>
-                experiences.map((experience) =>
-                  experience.id === id
-                    ? { ...experience, startMonthYear: e.target.value }
-                    : experience,
+                setExperiences(
+                  experiences.map((experience) =>
+                    experience.id === experienceId
+                      ? { ...experience, startMonthYear: e.target.value }
+                      : experience,
+                  ),
                 )
               }
             />
@@ -44,10 +48,12 @@ function ExperienceForm({ experiences, setExperiences }) {
               type="text"
               value={endMonthYear}
               onChange={(e) =>
-                experiences.map((experience) =>
-                  experience.id === id
-                    ? { ...experience, endMonthYear: e.target.value }
-                    : experience,
+                setExperiences(
+                  experiences.map((experience) =>
+                    experience.id === experienceId
+                      ? { ...experience, endMonthYear: e.target.value }
+                      : experience,
+                  ),
                 )
               }
             />
@@ -57,10 +63,12 @@ function ExperienceForm({ experiences, setExperiences }) {
               type="text"
               value={companyName}
               onChange={(e) =>
-                experiences.map((experience) =>
-                  experience.id === id
-                    ? { ...experience, companyName: e.target.value }
-                    : experience,
+                setExperiences(
+                  experiences.map((experience) =>
+                    experience.id === experienceId
+                      ? { ...experience, companyName: e.target.value }
+                      : experience,
+                  ),
                 )
               }
             />
@@ -70,10 +78,12 @@ function ExperienceForm({ experiences, setExperiences }) {
               type="text"
               value={city}
               onChange={(e) =>
-                experiences.map((experience) =>
-                  experience.id === id
-                    ? { ...experience, city: e.target.value }
-                    : experience,
+                setExperiences(
+                  experiences.map((experience) =>
+                    experience.id === experienceId
+                      ? { ...experience, city: e.target.value }
+                      : experience,
+                  ),
                 )
               }
             />
@@ -81,11 +91,11 @@ function ExperienceForm({ experiences, setExperiences }) {
             <label htmlFor="">Country</label>
             <input
               type="text"
-              value={title}
+              value={country}
               onChange={(e) =>
                 setExperiences(
                   experiences.map((experience) =>
-                    experience.id === id
+                    experience.id === experienceId
                       ? { ...experience, country: e.target.value }
                       : experience,
                   ),
@@ -102,10 +112,19 @@ function ExperienceForm({ experiences, setExperiences }) {
                   type="text"
                   value={text}
                   onChange={(e) =>
-                    experiences.pointers.map((pointer) =>
-                      pointers.id === id
-                        ? { ...pointer, text: e.target.value }
-                        : pointer,
+                    setExperiences(
+                      experiences.map((experience) =>
+                        experience.id === experienceId
+                          ? {
+                              ...experience,
+                              pointers: experience.pointers.map((pointer) =>
+                                pointer.id === id
+                                  ? { ...pointer, text: e.target.value }
+                                  : pointer,
+                              ),
+                            }
+                          : experience,
+                      ),
                     )
                   }
                 />
