@@ -169,7 +169,7 @@ function App() {
 
   return (
     <div>
-      <Sidebar generalInfo={generalInfo} setGeneralInfo={setGeneralInfo} summary={summary} setSummary={setSummary} education={education} setEducation={setEducation}/>
+      <Sidebar generalInfo={generalInfo} setGeneralInfo={setGeneralInfo} summary={summary} setSummary={setSummary} education={education} setEducation={setEducation} skills={skills} setSkills={setSkills}/>
       <GeneralInfo generalInfo={generalInfo} />
       <Summary summary={summary} />
       <Education education={education} />

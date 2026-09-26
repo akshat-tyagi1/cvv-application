@@ -5,7 +5,7 @@ function Skills({skills}) {
             {skills.map(({id, category, technologies}) => (
                 <dl key={id} className="skill-row">
                     <dt>{category}</dt>
-                    <dd>[{technologies}]</dd>
+                    <dd>{technologies}</dd>
                 </dl>
             ))}
         </section>
