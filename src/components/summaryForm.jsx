@@ -4,7 +4,7 @@ function SummaryForm({ summary, setSummary }) {
       <label htmlFor="">Summary</label>
       <input
         type="text"
-        placeholder={summary}
+        value={summary}
         onChange={(e) => setSummary(e.target.value)}
       />
     </div>

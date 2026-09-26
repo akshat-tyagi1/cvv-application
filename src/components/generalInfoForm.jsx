@@ -5,7 +5,7 @@ function GeneralInfoForm({ generalInfo, setGeneralInfo }) {
       <input
         id=""
         type="text"
-        placeholder={generalInfo.name}
+        value={generalInfo.name}
         onChange={(e) =>
           setGeneralInfo({
             ...generalInfo,
@@ -18,7 +18,7 @@ function GeneralInfoForm({ generalInfo, setGeneralInfo }) {
       <input
         id=""
         type="text"
-        placeholder={generalInfo.email}
+        value={generalInfo.email}
         onChange={(e) =>
           setGeneralInfo({
             ...generalInfo,
@@ -31,7 +31,7 @@ function GeneralInfoForm({ generalInfo, setGeneralInfo }) {
       <input
         id=""
         type="text"
-        placeholder={generalInfo.contactNumber}
+        value={generalInfo.contactNumber}
         onChange={(e) =>
           setGeneralInfo({
             ...generalInfo,
@@ -44,7 +44,7 @@ function GeneralInfoForm({ generalInfo, setGeneralInfo }) {
       <input
         id=""
         type="text"
-        placeholder={generalInfo.location}
+        value={generalInfo.location}
         onChange={(e) =>
           setGeneralInfo({
             ...generalInfo,
@@ -57,7 +57,7 @@ function GeneralInfoForm({ generalInfo, setGeneralInfo }) {
       <input
         id=""
         type="text"
-        placeholder={generalInfo.linkdin}
+        value={generalInfo.linkdin}
         onChange={(e) =>
           setGeneralInfo({
             ...generalInfo,
@@ -70,7 +70,7 @@ function GeneralInfoForm({ generalInfo, setGeneralInfo }) {
       <input
         id=""
         type="text"
-        placeholder={generalInfo.github}
+        value={generalInfo.github}
         onChange={(e) =>
           setGeneralInfo({
             ...generalInfo,

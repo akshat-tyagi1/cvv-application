@@ -15,14 +15,14 @@ function Experience({ expereinces }) {
           pointers,
         }) => (
           <article key={id} className="entry">
-            <div className="experience-header">
+            <div className="entry-header">
               <h3>[{title}]</h3>
               <span>
                 [{startMonthYear} – {endMonthYear}]
               </span>
             </div>
 
-            <div className="experience-details">
+            <div className="entry-details">
               <p>[{companyName}]</p>
               <span>
                 [{city}, {country}]

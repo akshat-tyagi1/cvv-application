@@ -24,12 +24,9 @@ function App() {
     {
       id: crypto.randomUUID(),
       name: "University Name",
-      city: "City",
-      state: "State",
-      county: "Country",
+      location: "City, City, Country",
       degree: "Degree, e.g. B.Tech in Computer Scinece and Engineering",
-      startYear: "Start Year",
-      endYear: "End Year",
+      years: "Start Year - End Year",
     },
   ]);
 
@@ -172,7 +169,7 @@ function App() {
 
   return (
     <div>
-      <Sidebar generalInfo={generalInfo} setGeneralInfo={setGeneralInfo} summary={summary} setSummary={setSummary}/>
+      <Sidebar generalInfo={generalInfo} setGeneralInfo={setGeneralInfo} summary={summary} setSummary={setSummary} education={education} setEducation={setEducation}/>
       <GeneralInfo generalInfo={generalInfo} />
       <Summary summary={summary} />
       <Education education={education} />

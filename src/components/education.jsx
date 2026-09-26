@@ -5,19 +5,19 @@ function Education({ education }) {
 
       <div>
         {education.map(
-          ({ id, name, city, state, country, degree, startYear, endYear }) => (
+          ({ id, name, location, degree, years }) => (
             <article className="entry" key={id}>
               <div className="entry-header">
-                <h3>[{name}]</h3>
+                <h3>{name}</h3>
                 <span>
-                  [{city}, {state}, {country}]
+                  {location}
                 </span>
               </div>
 
               <div className="entry-details">
-                <p>[{degree}]</p>
+                <p>{degree}</p>
                 <span>
-                  [{startYear}] - [{endYear}]
+                  {years}
                 </span>
               </div>
             </article>
