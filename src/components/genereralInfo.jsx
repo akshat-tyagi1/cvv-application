@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 
 function GeneralInfo({ generalInfo }) {
-  const { name, email, contactNumber, city, state, linkdin, github, summary } =
+  const { name, email, contactNumber, location, linkdin, github, summary } =
     generalInfo;
 
   return (
@@ -25,7 +25,7 @@ function GeneralInfo({ generalInfo }) {
         <div>
           <FaMapMarkerAlt size={16} />
           <span>
-            [{city}, {state}]
+            [{location}]
           </span>
         </div>
         <div>

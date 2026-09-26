@@ -5,14 +5,14 @@ import Skills from "./components/skills";
 import Experience from "./components/experience";
 import Projects from "./components/projects";
 import Achievements from "./components/achievement";
+import Sidebar from "./components/sidebar";
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState({
     name: "Your Name",
     email: "your.email@example.com",
     contactNumber: "+XX XXXXX XXXXX",
-    city: "Your City",
-    state: "State",
+    location: "Your City, State",
     linkdin: "linkdin.com/in/yourusername",
     github: "github.com/yourusername",
     summary:
@@ -171,6 +171,7 @@ function App() {
 
   return (
     <div>
+      <Sidebar generalInfo={generalInfo} setGeneralInfo={setGeneralInfo} />
       <GeneralInfo generalInfo={generalInfo} />
       <Education education={education} />
       <Skills skills={skills} />
